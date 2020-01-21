@@ -22,6 +22,6 @@ io.on("connection", socket => {
 });
 
 // Initialize our websocket server on port 5000
-http.listen(port, () => {
-  console.log("started on port "+port);
+http.listen(process.env.PORT || port, () => {
+  console.log("started on port "+ process.env.PORT || port);
 });
